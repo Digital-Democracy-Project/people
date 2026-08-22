@@ -4,7 +4,7 @@ given_name: Merv
 family_name: Riepe
 birth_date: 1942-07-16
 gender: Male
-email: mriepe@leg.ne.gov
+email: merv.riepe@leg.ne.gov
 image: https://www.nebraskalegislature.gov/media/images/senators/dist12/highres/dist12.jpg
 party:
 - name: Nonpartisan
@@ -29,6 +29,8 @@ other_names:
 - name: M.M. Riepe
 - name: Mervin Merle Riepe
 - name: Riepe, M.
+ids:
+  twitter: voteriepe
 sources:
 - url: https://ballotpedia.org/Merv_Riepe
 - url: https://en.wikipedia.org/wiki/Merv_Riepe

@@ -4,7 +4,7 @@ given_name: Rob
 family_name: Clements
 birth_date: 1950-12-11
 gender: Male
-email: rclements@leg.ne.gov
+email: robert.clements@leg.ne.gov
 image: https://www.nebraskalegislature.gov/media/images/senators/dist02/highres/dist02.jpg
 party:
 - name: Nonpartisan
@@ -30,6 +30,8 @@ other_identifiers:
   identifier: NEL000105
 - scheme: legacy_openstates
   identifier: NEL000162
+ids:
+  facebook: Senator.Clements
 sources:
 - url: https://ballotpedia.org/Robert_Clements
 - url: https://en.wikipedia.org/wiki/Robert_Clements_(Nebraska_politician)
