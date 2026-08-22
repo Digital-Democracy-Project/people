@@ -4,6 +4,13 @@
 
 This repository contains YAML files with official information on state legislators, governors, and some municipal leaders.
 
+## Digital Democracy Project fork
+
+[Digital Democracy Project](https://digitaldemocracyproject.org) maintains a fork of this repo, but with the remotes **inverted** relative to our other Open States forks — deliberately, since this data backs a live weekly production sync:
+
+- `origin` → the public project (kept current via a weekly `git pull --ff-only`, so production never silently falls behind community data).
+- `ddp` → our fork, used only as a staging remote to push a local fix branch and open a PR back upstream — never a source we pull from.
+
 ## Links
 
 * [People Issues](https://github.com/openstates/issues/issues?q=is%3Aissue+is%3Aopen+label%3Adata%3Apeople)
