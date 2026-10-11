@@ -13,6 +13,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: main   # a manual run from another branch (the failure rehearsal) must never merge into or push that branch's content to main
           token: ${{ secrets.DDP_SYNC_TOKEN }}   # repo-scoped PAT (PLAN-fork-management.md 8.6); the built-in token cannot push workflow-file changes
       - name: Merge upstream main
         id: merge
@@ -47,9 +48,9 @@ jobs:
           else
             people=$(printf '%s\n' "$changed" | sed -En 's#^data/([a-z]{2})/(legislature|retired|executive|municipalities)/.*#\1#p' | sort -u)
             [ -z "$people" ] || uv run os-people lint $people
-            committees=$(printf '%s\n' "$changed" | sed -En 's#^data/([a-z]{2})/committees/.*#\1#p' | sort -u)
-            [ -z "$committees" ] || uv run os-committees lint $committees
           fi
+          committees=$(printf '%s\n' "$changed" | sed -En 's#^data/([a-z]{2})/committees/.*#\1#p' | sort -u)
+          [ -z "$committees" ] || uv run os-committees lint $committees
           uv run python .github/scripts/check_duplicate_people.py --changed-files $changed --base-ref "$BEFORE"
       - name: Push
         if: steps.merge.outputs.changed == 'true'
