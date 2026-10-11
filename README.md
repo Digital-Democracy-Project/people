@@ -6,10 +6,11 @@ This repository contains YAML files with official information on state legislato
 
 ## Digital Democracy Project fork
 
-[Digital Democracy Project](https://digitaldemocracyproject.org) maintains a fork of this repo, but with the remotes **inverted** relative to our other Open States forks — deliberately, since this data backs a live weekly production sync:
+[Digital Democracy Project](https://digitaldemocracyproject.org) maintains this fork. Its `main` is the public project's `main` **plus our carried fixes**, and production reads from it:
 
-- `origin` → the public project (kept current via a weekly `git pull --ff-only`, so production never silently falls behind community data).
-- `ddp` → our fork, used only as a staging remote to push a local fix branch and open a PR back upstream — never a source we pull from.
+- A nightly job (`.github/workflows/ddp-sync-upstream.yml`) merges the public project's `main` into this fork's `main`, and pushes only if the merge is clean and passes yamllint, `os-people lint` on each changed state, and the duplicate-person check.
+- A fix is merged here through a pull request (with a green `Lint YAML`) without waiting for upstream review, and is also sent upstream. Its commit message ends with `Upstream-PR: openstates/people#N` and `Source: <url>` trailers. When upstream merges the same change, the nightly merge produces no difference.
+- Remotes on a DDP host: `origin` → this fork, `upstream` → the public project.
 
 ## Links
 
