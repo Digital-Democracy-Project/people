@@ -7,14 +7,13 @@ sources:
 - url: https://www.flsenate.gov/Committees/Show/FT
 - url: https://www.flsenate.gov/Committees/Show/FT/
   note: Committee Details Page
+- url: https://www.flsenate.gov/Committees/Show/FT/2026F
 links:
 - url: https://www.flsenate.gov/Committees/Show/FT
 - url: https://www.flsenate.gov/Committees/Show/FT/
   note: homepage
+- url: https://www.flsenate.gov/Committees/Show/FT/2026F
 members:
-- name: "Bryan \xC1vila"
-  role: chair
-  person_id: ocd-person/a4a5f92e-62cf-401b-9fc6-9d9a63498d5c
 - name: Don Gaetz
   role: vice chair
   person_id: ocd-person/c45cbed2-9b2e-4507-a6d1-3f960d330c34

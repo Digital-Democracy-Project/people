@@ -14,9 +14,9 @@ roles:
   district: '28'
 - start_date: 2015-01-05
   end_date: 2021-01-03
-  type: upper
+  type: lower
   jurisdiction: ocd-jurisdiction/country:us/state:mt/government
-  district: '28'
+  district: '57'
 - start_date: 2023-01-02
   end_date: 2025-01-05
   type: upper
@@ -35,6 +35,9 @@ offices:
   address: P.O. Box 337, Columbus, MT 59019
   voice: 406-690-1933
 links:
+- url: https://leg.mt.gov/legislator-information/roster/individual/4799
+  note: legislator page
+- url: https://leg.mt.gov/legislator-information/roster/individual/5116
 - url: https://leg.mt.gov/legislator-information/roster/individual/7635
 - url: https://legislators.legmt.gov/#/legislator/29
 - url: https://www.legmt.gov/legislators/1263/
@@ -43,10 +46,17 @@ other_names:
 - name: F.J. Mandeville
 - name: Mandeville, F.
 - name: Mandeville, Forrest
+other_identifiers:
+- scheme: legacy_openstates
+  identifier: MTL000229
 sources:
 - url: https://ballotpedia.org/Forrest_Mandeville
 - url: https://en.wikipedia.org/wiki/Forrest_Mandeville
 - url: https://justfacts.votesmart.org/candidate/biography/149244/forrest-mandeville
+- url: https://leg.mt.gov/legislator-information/?session_select=111
+  note: legislator list page
+- url: https://leg.mt.gov/legislator-information/?session_select=113
+- url: https://leg.mt.gov/legislator-information/roster/individual/5116
 - url: https://leg.mt.gov/legislator-information/roster/individual/7635
 - url: https://legislators.legmt.gov/#/legislator/29
 - url: https://www.legmt.gov/legislators/1263

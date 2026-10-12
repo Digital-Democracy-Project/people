@@ -9,8 +9,8 @@ image: https://unitedstates.github.io/images/congress/450x550/C001126.jpg
 party:
 - name: Republican
 roles:
-- start_date: 2021-11-04
-  end_date: 2030-01-01
+- start_date: 2025-01-03
+  end_date: 2027-01-03
   type: lower
   jurisdiction: ocd-jurisdiction/country:us/government
   district: OH-15
@@ -31,6 +31,9 @@ offices:
 - classification: district
   address: 140 E. Town St. Suite 1200, Columbus, OH 43215
   voice: 614-927-6902
+- classification: district
+  address: 201 W. Water St. Second Floor, Piqua, OH 45356
+  voice: 937-778-5145
 links:
 - url: https://carey.house.gov
   note: website

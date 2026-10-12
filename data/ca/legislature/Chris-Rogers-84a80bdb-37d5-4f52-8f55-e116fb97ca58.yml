@@ -13,6 +13,10 @@ roles:
   type: lower
   jurisdiction: ocd-jurisdiction/country:us/state:ca/government
   district: '2'
+- start_date: 2020-12-11
+  end_date: 2022-12-13
+  type: mayor
+  jurisdiction: ocd-jurisdiction/country:us/state:ca/place:santa_rosa/government
 offices:
 - classification: capitol
   address: Room 5130, 1021 O St. P.O. Box 942849, Sacramento, CA 94249
@@ -32,11 +36,13 @@ links:
 other_names:
 - name: C. Rogers
 - name: C.J. Rogers
+- name: Christopher John Rogers
 - name: Rogers, C.
 sources:
-- url: http://justfacts.votesmart.org/candidate/biography/197818/chris-rogers
 - url: https://a02.asmdc.org
 - url: https://ballotpedia.org/Chris_Rogers_(California)
 - url: https://en.wikipedia.org/wiki/Chris_Rogers_(politician)
+- url: https://justfacts.votesmart.org/candidate/biography/197818/chris-rogers
+- url: https://srcity.org/Directory.aspx?EID=378
 - url: https://www.assembly.ca.gov/assemblymembers/02
 - url: https://www.linkedin.com/in/chrisrogersforassembly
