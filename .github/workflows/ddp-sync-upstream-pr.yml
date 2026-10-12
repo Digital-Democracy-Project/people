@@ -1,0 +1,29 @@
+name: DDP sync upstream PR
+on:
+  schedule:
+    - cron: "30 1 * * *"   # 01:30 UTC; a person approves the PR, so nothing reaches main before then
+  workflow_dispatch: {}
+concurrency: ddp-sync-upstream
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  sync-pr:
+    runs-on: ubuntu-latest   # git >= 2.38 is needed for merge-tree --write-tree; ubuntu-latest ships a newer git
+    env:
+      UPSTREAM_REPO: openstates/people
+      GH_TOKEN: ${{ secrets.DDP_SYNC_TOKEN }}   # a PAT, not the built-in token: PRs opened with the built-in token do not trigger Lint YAML
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.DDP_SYNC_TOKEN }}
+      - run: bash .github/scripts/ddp-sync-pr.sh
+      - name: Tell us
+        if: failure()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          url="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          curl -fsS -X POST -H 'Content-type: application/json' \
+            --data "{\"text\":\":red_circle: *${GITHUB_REPOSITORY#*/} sync-PR job failed* - $url\"}" "$SLACK_WEBHOOK_URL" || true
