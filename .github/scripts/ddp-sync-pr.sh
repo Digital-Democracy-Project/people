@@ -13,6 +13,7 @@ if [ "$behind" -eq 0 ]; then
   echo "up to date"; exit 0
 fi
 data=$(git diff --name-only origin/main...upstream/main -- data | wc -l | tr -d ' ')
+workflows=$(git diff --name-only origin/main...upstream/main -- .github | sed 's/^/  /' || true)   # workflow changes are the security-relevant part and would be buried in a big data diff
 set +e   # git exits 1 for conflicts AND for a bad ref, so judge the output, not the exit code
 mt=$(git merge-tree --write-tree --name-only --no-messages origin/main upstream/main 2>/tmp/mt.err)
 set -e
@@ -22,6 +23,8 @@ git push --force origin upstream/main:refs/heads/sync/upstream   # sync/upstream
 title="Sync upstream (${behind} commits)"
 body="Upstream mainline commits: ${behind}. Files under data/: ${data}.
 Would conflict today: ${conflicts:-none}
+Changes under .github/ (read these first; they can run code):
+${workflows:-  none}
 Gate: this PR's Lint YAML check. Merge with a real merge commit (not a rebase), per PLAN-fork-management.md §8.3."
 if [ -z "$pr" ]; then gh pr create --base main --head sync/upstream --title "$title" --body "$body"
 else gh pr edit "$pr" --title "$title" --body "$body"; fi

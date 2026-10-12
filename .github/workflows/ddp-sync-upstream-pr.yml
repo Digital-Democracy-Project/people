@@ -9,6 +9,9 @@ permissions:
   pull-requests: write
 jobs:
   sync-pr:
+    # The secrets live in an Environment limited to main, not in repo-level secrets: the standing PR comes from a branch in this repo,
+    # so repo-level secrets would be handed to whatever pull_request workflow upstream ships, before a person reads the PR.
+    environment: ddp-sync
     runs-on: ubuntu-latest   # git >= 2.38 is needed for merge-tree --write-tree; ubuntu-latest ships a newer git
     env:
       UPSTREAM_REPO: openstates/people
