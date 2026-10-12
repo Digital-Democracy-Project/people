@@ -1,0 +1,17 @@
+# DDP: role-date findings in the PUBLIC project's own data that the role-date check reports on the first catch-up
+# merge of upstream (found 2026-10-12 by rehearsing it). Each line is an exact finding as the check prints it; the
+# patched "check role date integrity selectively" step in lint-yaml.yml ignores these lines and still fails on any
+# other blocking finding. NO blank lines in this file (a blank pattern would match everything).
+# Who updates it: whoever merges a sync PR. When upstream fixes one of these records, delete its line; never add a
+# line for a finding that appears in a NEW sync PR (that is exactly what the check is for: read it, fix or report it).
+# Once these records are in fork main they are no longer "new" to the check (it compares with the base), so this file
+# can be deleted, together with the step's filter, whenever it stops mattering.
+data/az/legislature/Catherine-Miranda-6241112b-910b-4ad8-9c0d-9caad318874f.yml: role has end_date 2019-01-14 but no start_date (district='27', type='upper')
+data/az/legislature/David-Gowan-51520de4-0e87-475b-91d2-99aa18addf72.yml: role has end_date 2012-12-31 but no start_date (district='30', type='lower')
+data/az/legislature/David-Gowan-51520de4-0e87-475b-91d2-99aa18addf72.yml: role has end_date 2016-12-31 but no start_date (district='14', type='lower')
+data/az/legislature/David-Gowan-51520de4-0e87-475b-91d2-99aa18addf72.yml: role has end_date 2023-01-08 but no start_date (district='14', type='upper')
+data/az/legislature/Rosanna-Gabaldn-6de57177-1b9e-4864-bb87-97c528842030.yml: role has end_date 2023-01-08 but no start_date (district='2', type='upper')
+data/az/legislature/Rosanna-Gabaldn-6de57177-1b9e-4864-bb87-97c528842030.yml: role has end_date 2020-01-10 but no start_date (district='2', type='lower')
+data/co/legislature/Julie-McCluskie-53facaaf-5673-4c76-b15a-6b5061965ae1.yml: role has end_date 2023-01-10 but no start_date (district='61', type='lower')
+data/il/municipalities/Rich-Hofeld-709b1a57-548f-4aff-9181-49a6468db6ae.yml: role has end_date 2029-05-01 but no start_date (district=None, type='mayor')
+data/tn/municipalities/Rusty-Tinnin-6b9ef152-4a2c-4d4a-af2c-e7e2002a3fc6.yml: role has end_date 2026-11-03 but no start_date (district=None, type='mayor')

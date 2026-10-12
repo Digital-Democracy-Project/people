@@ -118,8 +118,25 @@ jobs:
       env:
         BASE_ARGS: ${{ steps.base.outputs.base-args }}
       run: |
+        # DDP patch: ignore the exact findings listed in .github/known-role-date-findings.txt (upstream's own
+        # data, seen on the first catch-up merge); any other blocking finding still fails the step.
+        set +e
         uv run python .github/scripts/check_role_dates.py \
-          --changed-files $(cat .github/outputs/all_changed_files.txt) ${BASE_ARGS}
+          --changed-files $(cat .github/outputs/all_changed_files.txt) ${BASE_ARGS} \
+          > role-dates.out 2> role-dates.err
+        status=$?
+        set -e
+        cat role-dates.out role-dates.err
+        if [[ $status -ne 0 ]]; then
+          if ! grep -q -E '^data/' role-dates.out; then
+            echo "role-date check failed without reporting a finding"; exit "$status"
+          fi
+          unknown=$(grep -E '^data/' role-dates.out | grep -v -x -F -f .github/known-role-date-findings.txt || true)
+          if [[ -n "$unknown" ]]; then
+            echo "New role-date findings (not in .github/known-role-date-findings.txt):"; echo "$unknown"; exit 1
+          fi
+          echo "Only the known role-date findings from .github/known-role-date-findings.txt: ignored."
+        fi
     - name: check new URLs are live
       env:
         BASE_ARGS: ${{ steps.base.outputs.base-args }}
