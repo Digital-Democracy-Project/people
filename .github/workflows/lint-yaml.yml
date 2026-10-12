@@ -121,6 +121,10 @@ jobs:
         uv run python .github/scripts/check_role_dates.py \
           --changed-files $(cat .github/outputs/all_changed_files.txt) ${BASE_ARGS}
     - name: check new URLs are live
+      # DDP: on pulls of upstream's own data (the nightly sync PR and one-off
+      # catch-up PRs) a dead link is upstream's to fix, not ours, so it is
+      # reported but does not block. Our own edit PRs still fail on it.
+      continue-on-error: ${{ github.head_ref == 'sync/upstream' || startsWith(github.head_ref, 'catchup-') }}
       env:
         BASE_ARGS: ${{ steps.base.outputs.base-args }}
       run: |
