@@ -4,7 +4,7 @@ given_name: Darline
 family_name: Graham
 birth_date: 1964-06-12
 gender: Female
-image: https://img.legistorm.com/people/971/212971.jpg?rand=284886
+email: https://www.dgraham.senate.gov/
 party:
 - name: Republican
 roles:
@@ -15,7 +15,7 @@ roles:
   district: South Carolina
 offices:
 - classification: capitol
-  address: B33 Russell Senate Office Building, Washington, DC 20510
+  address: 211 Russell Senate Office Building, Washington, DC 20510
   voice: 202-224-5972
   fax: 202-224-3808
 - classification: district
@@ -42,6 +42,8 @@ offices:
   address: McMillan Federal Building 401 W. Evans St., Suite 111, Florence, SC 29501
   voice: 843-669-1505
   fax: 843-669-9015
+links:
+- url: https://www.dgraham.senate.gov/
 other_names:
 - name: D. Graham
 - name: D.L. Graham
@@ -50,5 +52,7 @@ other_identifiers:
 - scheme: bioguide
   identifier: G000608
 sources:
+- url: https://ballotpedia.org/Darline_Graham
 - url: https://en.wikipedia.org/wiki/Darline_Graham_Nordone
 - url: https://www.dgraham.senate.gov
+- url: https://www.linkedin.com/in/darline-graham-3a34429b

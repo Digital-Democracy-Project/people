@@ -51,6 +51,8 @@ other_names:
 - name: K. Britt
 - name: K.B. Britt
 - name: Katie Boyd Britt
+ids:
+  twitter: SenKatieBritt
 other_identifiers:
 - scheme: ballotpedia
   identifier: Katie Britt
@@ -79,4 +81,5 @@ sources:
 - url: https://unitedstates.github.io/
 - url: https://www.britt.senate.gov
 - url: https://www.govtrack.us/congress/members/katie_britt/456874
+- url: https://www.katiebrittforsenate.com/home#about
 - url: https://www.linkedin.com/in/katie-britt-90b2b982

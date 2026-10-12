@@ -4,7 +4,6 @@ given_name: Arnie
 family_name: Jensen
 gender: Male
 email: arnold.jensen@housegop.ct.gov
-image: https://cdn.rep-am.com/wp-content/uploads/2024/10/20241024-161212-pic-447309389.jpg
 party:
 - name: Republican
 roles:
@@ -28,4 +27,5 @@ sources:
 - url: https://en.wikipedia.org/wiki/Arnold_Jensen
 - url: https://justfacts.votesmart.org/candidate/biography/219115/arnold-jensen
 - url: https://www.cthousegop.com/jensen
+- url: https://www.cthousegop.com/jensen/about
 - url: https://www.linkedin.com/in/arnie-jensen-2b1bb110

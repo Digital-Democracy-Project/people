@@ -4,7 +4,6 @@ given_name: Mike
 family_name: Reese
 gender: Male
 email: sen30@legis.la.gov
-image: https://senate.la.gov/SenatorPics/Sen30.jpg
 party:
 - name: Republican
 roles:
@@ -33,6 +32,7 @@ other_names:
 sources:
 - url: https://ballotpedia.org/Mike_Reese_(Louisiana)
 - url: https://en.wikipedia.org/wiki/Mike_Reese_(Louisiana_politician)
+- url: https://justfacts.votesmart.org/candidate/biography/186912/mike-reese
 - url: https://senate.la.gov/Senators_FullInfo
 - url: https://senate.la.gov/smembers.aspx?ID=30
 - url: https://senate.la.gov/smembers?ID=30

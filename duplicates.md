@@ -3,8 +3,8 @@
 Generated from `.github/scripts/check_duplicate_people.py` duplicate identity rule: within a state, two person files are duplicates when normalized `given_name` and `family_name` match.
 
 - States with duplicates: `52`
-- Duplicate name groups: `429`
-- Files involved: `866`
+- Duplicate name groups: `425`
+- Files involved: `858`
 
 Resolution convention: when a duplicate group is fixed, move the whole group under a `## Resolved` section at the bottom with the resolving PR number. This keeps unresolved groups easy to scan while preserving cleanup history for coordination.
 
@@ -22,9 +22,6 @@ Resolution convention: when a duplicate group is fixed, move the whole group und
 - `jack` `williams`
   - `data/al/legislature/Jack-W-Williams-a7e333c5-03f2-4343-9981-956bcc1ea38e.yml`
   - `data/al/retired/Jack-Williams-e383fc29-5212-42d3-bc76-46dd93bf3e6f.yml`
-- `john` `merrill`
-  - `data/al/executive/John-Merrill-6a69be8a-7d2c-4291-9d18-a03b7fdfd29d.yml`
-  - `data/al/retired/John-Merrill-5c06e1c9-7b24-4796-94de-eea8651a83f7.yml`
 - `mack` `butler`
   - `data/al/legislature/Mack-Butler-5071243c-3e2d-4acb-ac8d-0d3a8af3eb8a.yml`
   - `data/al/retired/Mack-Butler-76f9d6ad-f147-4913-b011-3f52e1105f77.yml`
@@ -122,63 +119,6 @@ Resolution convention: when a duplicate group is fixed, move the whole group und
   - `data/ar/legislature/Tony-Furman-55779b79-fd86-4991-882f-05819d80a87d.yml`
   - `data/ar/retired/Tony-Furman-29f5644d-c2f0-47a1-af09-90d778bccd7b.yml`
 
-## az
-
-- `anthony` `kern`
-  - `data/az/retired/Anthony-Kern-82385dc6-0d39-4d02-aa6d-95dbc2534972.yml`
-  - `data/az/retired/Anthony-Kern-f4ea36ef-3e74-4753-be45-43d3029a8a0d.yml`
-  - `data/az/retired/Anthony-T-Kern-5053d803-8513-47ed-9ad1-d49c1b12f012.yml`
-- `catherine` `miranda`
-  - `data/az/legislature/Catherine-Miranda-6241112b-910b-4ad8-9c0d-9caad318874f.yml`
-  - `data/az/retired/Catherine-Miranda-cab32a4c-9f0f-445b-b8d2-a80a937ec87a.yml`
-- `david` `gowan`
-  - `data/az/legislature/David-Gowan-51520de4-0e87-475b-91d2-99aa18addf72.yml`
-  - `data/az/retired/David-Gowan-96ec9994-949d-47bd-8b20-79dec573323f.yml`
-- `jerry` `weiers`
-  - `data/az/retired/Jerry-Weiers-5d724fe6-d337-4eae-820a-37ce92dd363c.yml`
-  - `data/az/retired/Jerry-Weiers-6f8b10da-5b02-4732-94ab-873957fb0a3f.yml`
-  - `data/az/retired/Jerry-Weiers-c3ecc534-9335-4bb4-99ec-c9fc6d056399.yml`
-- `john` `giles`
-  - `data/az/retired/John-Giles-5c1097a1-137c-422f-9906-99b9c9503687.yml`
-  - `data/az/retired/John-Giles-5efe53bd-0f33-4ade-a121-271d2da9381b.yml`
-- `justin` `olson`
-  - `data/az/legislature/Justin-Olson-448cb969-a498-4826-ad1e-c443fe9b8057.yml`
-  - `data/az/retired/Justin-Olson-7eb206d9-c5b3-441e-93c2-8b2ba8110a32.yml`
-- `katie` `hobbs`
-  - `data/az/executive/Katie-Hobbs-6e522a2a-e7b7-4713-a40f-c897e4341a87.yml`
-  - `data/az/retired/Katie-Hobbs-b2e74e17-c184-4a98-921f-0683e513de6c.yml`
-  - `data/az/retired/Katie-Hobbs-cd668109-5466-4c61-96cf-f5448ea118bd.yml`
-- `kevin` `hartke`
-  - `data/az/municipalities/Kevin-Hartke-2f98bb5d-6401-4717-9a6e-3b879b82eb47.yml`
-  - `data/az/retired/Kevin-Hartke-52e15d8f-2819-4c1a-aeaa-04abde69d2d7.yml`
-- `lela` `alston`
-  - `data/az/legislature/Lela-Alston-030638cb-5fcd-4637-8c59-c129e28db988.yml`
-  - `data/az/retired/Lela-Alston-7bb65fd8-141d-49f5-a37d-98f92d6b522d.yml`
-- `martin` `quezada`
-  - `data/az/retired/Martin-J-Quezada-705bec87-a9ff-455b-a63f-ec3108e64f57.yml`
-  - `data/az/retired/Martin-Quezada-63396e5e-c77d-4f2c-b700-ff240eea75f5.yml`
-- `regina` `cobb`
-  - `data/az/retired/Regina-Cobb-55cdd789-761a-415a-8a35-c83306e1e4fc.yml`
-  - `data/az/retired/Regina-E-Cobb-c1216de5-2070-43b3-8398-7cf074dbf336.yml`
-- `reginald` `bolding`
-  - `data/az/retired/Reginald-Bolding-97d71f2f-9518-43fa-8076-5a78809563ff.yml`
-  - `data/az/retired/Reginald-Bolding-Jr-e7896fe6-b6a8-4fee-99d2-efb539262b7d.yml`
-- `rosanna` `gabaldón`
-  - `data/az/legislature/Rosanna-Gabaldn-6de57177-1b9e-4864-bb87-97c528842030.yml`
-  - `data/az/retired/Rosanna-Gabaldn-6910a81f-2b36-450a-ae79-b7387862ff05.yml`
-- `sarah` `liguori`
-  - `data/az/legislature/Sarah-Liguori-99f91f84-b1db-4a48-897a-4f87593357ea.yml`
-  - `data/az/retired/Sarah-Liguori-f62fec81-65ec-4893-aa8a-ea6b7c8b8df8.yml`
-- `shawnna` `bolick`
-  - `data/az/legislature/Shawnna-Bolick-355be281-2f88-4108-b894-62c54b67fba3.yml`
-  - `data/az/retired/Shawnna-Bolick-33c76d31-65d6-4072-9d30-c1b292a7bb52.yml`
-- `t.j.` `shope`
-  - `data/az/legislature/Thomas-R-Shope-bde26535-68ee-4eef-bbc8-bfa8a4380015.yml`
-  - `data/az/retired/TJ-Shope-ac99bf33-0875-4723-836c-286476d8725f.yml`
-- `warren` `petersen`
-  - `data/az/legislature/Warren-Petersen-66e496a4-a407-4af1-add3-ef6899b89807.yml`
-  - `data/az/retired/Warren-Petersen-1bbf0d07-d4d6-4654-b330-8d7f6542e258.yml`
-
 ## ca
 
 - `aja` `brown`
@@ -197,9 +137,6 @@ Resolution convention: when a duplicate group is fixed, move the whole group und
 - `carol` `dutra-vernaci`
   - `data/ca/municipalities/Carol-Dutra-Vernaci-611c6cfe-bc70-4f7e-bca1-b0a48579a132.yml`
   - `data/ca/retired/Carol-Dutra-Vernaci-40737603-029c-4a1b-a295-c7a73450b4c4.yml`
-- `chris` `rogers`
-  - `data/ca/legislature/Chris-Rogers-84a80bdb-37d5-4f52-8f55-e116fb97ca58.yml`
-  - `data/ca/municipalities/Chris-Rogers-40141964-f8cb-4270-a013-c483902a09ee.yml`
 - `darrell` `steinberg`
   - `data/ca/retired/Darrell-Steinberg-9a11af5e-84e1-445b-b1db-5f9a431e9dc2.yml`
   - `data/ca/retired/Darrell-Steinberg-b16c60c3-a356-48c5-88b9-29adaa61cabf.yml`
@@ -236,9 +173,6 @@ Resolution convention: when a duplicate group is fixed, move the whole group und
 - `roger` `niello`
   - `data/ca/legislature/Roger-W-Niello-ee85bc79-20ee-4046-905e-ad797995fa41.yml`
   - `data/ca/retired/Roger-Niello-917e90ed-3ac1-4ee9-a143-789ad0cf5e72.yml`
-- `shirley` `weber`
-  - `data/ca/executive/Shirley-Weber-c8e67d27-47c2-4565-8e29-79bc78ae9495.yml`
-  - `data/ca/retired/Shirley-N-Weber-71cfb6c2-577a-4813-8bdf-a1083314c491.yml`
 - `susan m.` `landry`
   - `data/ca/retired/Susan-M-Landry-1c4e63bd-84a8-4196-9395-4a20efe21d7f.yml`
   - `data/ca/retired/Susan-M-Landry-f7853ff4-5f48-49cf-a644-9ee037391e05.yml`
@@ -281,9 +215,6 @@ Resolution convention: when a duplicate group is fixed, move the whole group und
 
 ## ct
 
-- `aundré` `bumgardner`
-  - `data/ct/legislature/Aundre-Bumgardner-32ad6577-b1ee-411f-9dca-e40e06226703.yml`
-  - `data/ct/retired/Aundr-Bumgardner-1af3c171-f7f9-4843-8a06-25960ac20bc6.yml`
 - `brenda l.` `kupchick`
   - `data/ct/municipalities/Brenda-L-Kupchick-d799c3ad-6665-45be-b4d8-6784ad72849a.yml`
   - `data/ct/retired/Brenda-L-Kupchick-d9f16dc8-f123-451a-a1cf-191706553a25.yml`
@@ -296,9 +227,6 @@ Resolution convention: when a duplicate group is fixed, move the whole group und
 - `marilyn` `moore`
   - `data/ct/retired/Marilyn-Moore-8d113751-6123-4181-a3a7-eb5c3c9e70e5.yml`
   - `data/ct/retired/Marilyn-V-Moore-41d83b98-d5ab-48db-b847-3a3e08194b4c.yml`
-- `stephanie` `thomas`
-  - `data/ct/executive/Stephanie-Thomas-e54205b6-c824-4f64-9a68-301d01318457.yml`
-  - `data/ct/retired/Stephanie-Thomas-ea5497d0-5a3b-4dcc-9d13-5d50a586cf2b.yml`
 
 ## dc
 
@@ -408,9 +336,6 @@ Resolution convention: when a duplicate group is fixed, move the whole group und
 
 ## ga
 
-- `brad` `raffensperger`
-  - `data/ga/executive/Brad-Raffensperger-02e75ac0-4350-4305-980e-8dc0462c5cc1.yml`
-  - `data/ga/retired/Brad-Raffensperger-1e5d1b04-a659-45b4-9c43-0945df52b1a3.yml`
 - `derrick` `jackson`
   - `data/ga/legislature/Derrick-Jackson-9046fcb2-f3eb-4233-bd92-32c94e60f9df.yml`
   - `data/ga/retired/Derrick-Jackson-9c6d1032-c14f-4b57-90df-eaa1273cc336.yml`
@@ -942,9 +867,6 @@ Resolution convention: when a duplicate group is fixed, move the whole group und
 
 ## ne
 
-- `danielle` `conrad`
-  - `data/ne/legislature/Danielle-Conrad-bf280e36-3547-4d6a-b5aa-d6c32bb5547a.yml`
-  - `data/ne/retired/Danielle-Conrad-950eb956-e493-451e-a446-4faa11d9641e.yml`
 - `merv` `riepe`
   - `data/ne/legislature/Merv-Riepe-3c015cf9-e3de-42cf-a364-64607ecc70ce.yml`
   - `data/ne/retired/Merv-Riepe-8a0290ef-475b-4394-994e-d5fcc08970e8.yml`
@@ -987,9 +909,6 @@ Resolution convention: when a duplicate group is fixed, move the whole group und
 - `john` `reagan`
   - `data/nh/retired/John-M-Reagan-6fae3b68-faa2-4965-834d-94a8e28de553.yml`
   - `data/nh/retired/John-Reagan-f516d40a-3676-4437-8285-a931d7c2885b.yml`
-- `katherine` `prudhomme-o'brien`
-  - `data/nh/legislature/Katherine-J-Prudhomme-OBrien-a0a8c9d8-1f27-4d28-a249-8a5856ea5c05.yml`
-  - `data/nh/retired/Katherine-Prudhomme-OBrien-92c01f02-b619-495b-b3a5-4d089c044cb4.yml`
 - `keith` `murphy`
   - `data/nh/legislature/Keith-R-Murphy-7ec573c3-d961-4d08-a71c-d239490b5c1a.yml`
   - `data/nh/retired/Keith-Murphy-f5a60d8c-c900-4e53-9095-b9fdfeb7f506.yml`
@@ -1130,9 +1049,6 @@ Resolution convention: when a duplicate group is fixed, move the whole group und
 - `frank` `larose`
   - `data/oh/executive/Frank-LaRose-eaeed96a-2f5c-43f2-aef4-fa3432d33451.yml`
   - `data/oh/retired/Frank-LaRose-56038e50-64a7-40b8-a748-a772003e6c24.yml`
-- `kyle` `koehler`
-  - `data/oh/legislature/Kyle-Koehler-f2e79c7c-7e3a-496d-8f87-d43b62eb54a5.yml`
-  - `data/oh/retired/Kyle-Koehler-9578948b-5af3-46fd-9567-8438c67fa148.yml`
 - `mark` `romanchuk`
   - `data/oh/legislature/Mark-Romanchuk-2ae62dc8-e902-4a8e-99b7-182477c50bc3.yml`
   - `data/oh/retired/Mark-J-Romanchuk-257a1a5f-8888-49e4-a652-69db47e75832.yml`
@@ -1458,3 +1374,42 @@ Resolution convention: when a duplicate group is fixed, move the whole group und
 - `eric` `barlow`
   - `data/wy/legislature/Eric-Barlow-afa67bb0-3191-4dce-94ab-ddb3a9e7475c.yml`
   - `data/wy/retired/Eric-Barlow-d54d2b39-7361-46f7-b4be-b5f4cb11f7b3.yml`
+
+## Resolved
+
+### PR #4001
+
+- `ct` `aundré` `bumgardner`: consolidated retired (1af3c171) into legislature (32ad6577), deleted retired file
+- `ne` `danielle` `conrad`: consolidated retired (950eb956) into legislature (bf280e36), deleted retired file
+- `nh` `katherine` `prudhomme-o'brien`: consolidated retired (92c01f02) into legislature (a0a8c9d8), deleted retired file
+- `oh` `kyle` `koehler`: consolidated retired (9578948b) into legislature (f2e79c7c), deleted retired file
+- `ca` `chris` `rogers`: same person (Santa Rosa mayor 2020-2022 -> CA Assembly District 2 since 2024); mayor role/office/sources already consolidated into legislature file; corrected given_name back to `Chris` (was mistakenly set to `Christopher`)
+
+### auto-merge-2026-08-27
+
+- `az` `catherine` `miranda`: consolidated retired (cab32a4c) into legislature (6241112b), deleted retired file
+- `az` `david` `gowan`: consolidated retired (96ec9994) into legislature (51520de4), deleted retired file
+- `az` `justin` `olson`: consolidated retired (7eb206d9) into legislature (448cb969), deleted retired file
+- `az` `rosanna` `gabaldón`: consolidated both retired records (4a1331fe, 6910a81f) into legislature (6de57177), deleted retired files
+- `az` `shawnna` `bolick`: consolidated retired (33c76d31) into legislature (355be281), deleted retired file
+- `az` `t.j.` `shope`: consolidated both retired records (ac99bf33, dbab135f) into legislature (bde26535), deleted retired files
+
+### PR #4037
+
+- `az` `anthony` `kern`: consolidated 2 retired dupes into `82385dc6`
+- `az` `jerry` `weiers`: consolidated 2 retired dupes into `5d724fe6`
+- `az` `john` `giles`: consolidated retired dupe into `5c1097a1`
+- `az` `katie` `hobbs`: consolidated 2 retired dupes into executive `6e522a2a`
+- `az` `kevin` `hartke`: consolidated retired dupe into municipalities `2f98bb5d`
+- `az` `lela` `alston`: consolidated retired dupe into legislature `030638cb`
+- `az` `martin` `quezada`: consolidated retired dupe into `705bec87`
+- `az` `regina` `cobb`: consolidated retired dupe into `55cdd789`
+- `az` `reginald` `bolding`: consolidated retired dupe into `97d71f2f`
+- `az` `sarah` `liguori`: consolidated retired dupe into legislature `99f91f84`
+
+### PR #4045
+
+- `al` `john` `merrill`: consolidated executive (6a69be8a) into retired (5c06e1c9), deleted executive file
+- `ca` `shirley` `weber`: consolidated retired (71cfb6c2) into executive (c8e67d27), deleted retired file
+- `ct` `stephanie` `thomas`: consolidated retired (ea5497d0) into executive (e54205b6), deleted retired file
+- `ga` `brad` `raffensperger`: consolidated retired (1e5d1b04) into executive (02e75ac0), deleted retired file

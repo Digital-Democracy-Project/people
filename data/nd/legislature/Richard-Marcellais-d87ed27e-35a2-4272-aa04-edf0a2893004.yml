@@ -5,7 +5,6 @@ family_name: Marcellais
 birth_date: 1947-01-23
 gender: Male
 email: rmarcellais@ndlegis.gov
-image: https://www.legis.nd.gov/files/styles/medium/public/person/photo/rmarcellais.jpg?itok=0dcpvpyI
 party:
 - name: Democratic
 roles:
@@ -23,8 +22,9 @@ roles:
   jurisdiction: ocd-jurisdiction/country:us/state:nd/government
   district: '9'
 offices:
-- classification: capitol-mail
+- classification: capitol
   address: State Capitol 600 E. Boulevard Ave., Bismarck, ND 58505
+  voice: 701-328-3373
 - classification: district-mail
   address: ND
   voice: 701-477-8985

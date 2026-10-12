@@ -4,7 +4,6 @@ given_name: Mae
 family_name: Flexer
 gender: Female
 email: flexer@senatedems.ct.gov
-image: http://www.senatedems.ct.gov/templates/flexer/images/flexer-hi.jpg
 party:
 - name: Democratic
 roles:
@@ -24,7 +23,6 @@ offices:
 links:
 - url: https://cga.ct.gov/asp/CGABillStatus/CGAMemberBills.asp?dist_code=%27S29%27&dist_name=Flexer,%20Mae
 - url: https://www.senatedems.ct.gov/Flexer
-- url: https://www.senatedems.ct.gov/Flexer.php
 - url: https://www.senatedems.ct.gov/senator/mae-flexer
 other_names:
 - name: Flexer, M.
@@ -43,6 +41,7 @@ sources:
 - url: https://ballotpedia.org/Mae_Flexer
 - url: https://en.wikipedia.org/wiki/Mae_Flexer
 - url: https://j.futurefacts.votesmart.io/candidate/biography/107174/mae-flexer
+- url: https://justfacts.votesmart.org/candidate/biography/107174/mae-flexer
 - url: https://www.linkedin.com/in/mae-flexer-157b5010
 - url: https://www.senatedems.ct.gov/Flexer.php
 - url: https://www.senatedems.ct.gov/senator/mae-flexer

@@ -5,7 +5,6 @@ family_name: VanderWall
 birth_date: 1961-11-03
 gender: Male
 email: curtisvanderwall@house.mi.gov
-image: https://senate.michigan.gov/_images/35th.jpg
 party:
 - name: Republican
 roles:
@@ -17,7 +16,8 @@ roles:
   type: lower
   jurisdiction: ocd-jurisdiction/country:us/state:mi/government
   district: '101'
-- end_date: 2023-01-01
+- start_date: 2019-01-01
+  end_date: 2023-01-01
   type: upper
   jurisdiction: ocd-jurisdiction/country:us/state:mi/government
   district: '35'

@@ -5,7 +5,6 @@ family_name: Rich
 birth_date: 1951-11-18
 gender: Female
 email: janice.rich.senate@coleg.gov
-image: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBLzVTQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--afd770f3635f91909fdcc0bde3b95c1599089da7/Rich,%20Janice.jpg
 party:
 - name: Republican
 roles:
@@ -13,6 +12,11 @@ roles:
   type: upper
   jurisdiction: ocd-jurisdiction/country:us/state:co/government
   district: '7'
+- start_date: 2019-01-04
+  end_date: 2023-01-10
+  type: lower
+  jurisdiction: ocd-jurisdiction/country:us/state:co/government
+  district: '55'
 offices:
 - classification: capitol
   address: State Capitol Room 346, Colorado  Building 200 E. Colfax Ave., Denver,
@@ -21,6 +25,7 @@ offices:
 links:
 - url: https://leg.colorado.gov/legislators/janice-rich
   note: homepage
+- url: https://www.coloradosenaterepublicans.com/rich/
 other_names:
 - name: J. Rich
 - name: J.A. Rich
@@ -34,6 +39,7 @@ sources:
 - url: https://justfacts.votesmart.org/candidate/biography/181791/janice-rich
 - url: https://leg.colorado.gov/legislators
 - url: https://leg.colorado.gov/legislators/janice-rich
+- url: https://www.coloradosenaterepublicans.com/rich
 - url: https://www.linkedin.com/in/janice-rich-12205032
 extras:
   counties represented:
