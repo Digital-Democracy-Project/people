@@ -1,0 +1,9 @@
+id: ocd-person/00000000-0000-4000-8000-000000000001
+name: Test Person
+given_name: Test
+family_name: Person
+roles:
+- type: upper
+  district: '1'
+  jurisdiction: ocd-jurisdiction/country:us/state:zz/government
+  end_date: '2020-01-01'
