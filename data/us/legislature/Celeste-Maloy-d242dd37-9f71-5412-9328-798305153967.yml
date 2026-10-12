@@ -9,8 +9,8 @@ image: https://unitedstates.github.io/images/congress/450x550/M001228.jpg
 party:
 - name: Republican
 roles:
-- start_date: 2023-11-28
-  end_date: 2030-01-01
+- start_date: 2025-01-03
+  end_date: 2027-01-03
   type: lower
   jurisdiction: ocd-jurisdiction/country:us/government
   district: UT-2
@@ -60,6 +60,7 @@ other_identifiers:
 sources:
 - url: https://ballotpedia.org/Celeste_Maloy
 - url: https://en.wikipedia.org/wiki/Celeste_Maloy
+- url: https://justfacts.votesmart.org/candidate/biography/212289/celeste-maloy
 - url: https://maloy.house.gov
 - url: https://maloy.house.gov/about
 - url: https://unitedstates.github.io
