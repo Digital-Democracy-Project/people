@@ -8,9 +8,9 @@ This repository contains YAML files with official information on state legislato
 
 [Digital Democracy Project](https://digitaldemocracyproject.org) maintains this fork. Its `main` is the public project's `main` **plus our carried fixes**, and production reads from it:
 
-- A nightly job (`.github/workflows/ddp-sync-upstream.yml`) merges the public project's `main` into this fork's `main`, and pushes only if the merge is clean and passes yamllint, `os-people lint` on each changed state, and the duplicate-person check.
-- If the merge conflicts or a check fails, nothing is pushed (`main` is left exactly as it was), a Slack notice is posted, and the next night retries.
-- A fix is merged here through a pull request (with a green `Lint YAML`) without waiting for upstream review, and is also sent upstream. Its commit message ends with `Upstream-PR: openstates/people#N` and `Source: <url>` trailers. When upstream merges the same change, the nightly merge produces no difference.
+- A nightly job (`.github/workflows/ddp-sync-upstream.yml`) keeps one standing pull request open from the public project's `main` into this fork's `main`, and runs yamllint, `os-people lint` on each changed state, the duplicate-person check and the role-date check on it. A person reviews and approves it before anything reaches `main`.
+- A fix is merged here through a pull request (with a green `Lint YAML`) without waiting for upstream review, and is also sent upstream. Its commit message ends with `Upstream-PR: openstates/people#N` and `Source: <url>` trailers. Do not put "fix", "fixes", "close" or "resolve" directly before an upstream reference in a PR body or commit message: GitHub would close the upstream pull request when ours merges. When upstream merges the same change, the standing pull request shows no difference for it. A fix upstream declines but our source supports stays carried here.
+- The public project's `Update Database` workflow is switched off on this fork (it needs cloud credentials we do not have); `Lint YAML` stays on.
 - Remotes on a DDP host: `origin` → this fork, `upstream` → the public project.
 
 ## Links
