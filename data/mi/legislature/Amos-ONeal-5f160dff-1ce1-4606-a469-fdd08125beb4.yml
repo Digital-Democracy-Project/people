@@ -31,6 +31,7 @@ other_names:
 - name: O'Neal, A.
 - name: "O\x92 Neal"
 - name: "O\x92Neal"
+- name: O’Neal
 sources:
 - url: https://ballotpedia.org/Amos_O%27Neal
 - url: https://en.wikipedia.org/wiki/Amos_O%27Neal
