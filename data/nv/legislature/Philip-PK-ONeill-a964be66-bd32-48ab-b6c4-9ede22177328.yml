@@ -30,6 +30,9 @@ links:
 other_names:
 - name: O'Neill, P.
 - name: O'Neill, P.K.
+- name: O'Neill, PK
+- name: "O\xE2\x80\x99Neill, PK"
+- name: "O\u2019Neill, PK"
 - name: P. O'Neill
 - name: P.K. O'Neill
 - name: Philip P.K. O'Neill
