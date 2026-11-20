@@ -1,0 +1,14 @@
+id: ocd-person/9b3dd5ff-9d15-4c11-9910-00b27c1944e6
+name: Jake Coho
+given_name: Jake
+family_name: Coho
+roles:
+- start_date: 2026-03-09
+  end_date: 2026-03-13
+  type: upper
+  jurisdiction: ocd-jurisdiction/country:us/state:id/government
+  district: '13'
+  end_reason: acting senator, qualified substitute for Sen. Brian Lenney (Idaho Code 67-412)
+sources:
+- url: https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2026/journals/sfinal.pdf
+- url: https://legislature.idaho.gov/sessioninfo/2026/legislation/S1224/
