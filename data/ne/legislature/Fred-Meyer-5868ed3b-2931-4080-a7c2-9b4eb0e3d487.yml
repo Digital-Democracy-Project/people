@@ -17,7 +17,7 @@ roles:
   type: legislature
   jurisdiction: ocd-jurisdiction/country:us/state:ne/government
   district: '41'
-  end_date: 2025-02-03
+  end_date: 2025-01-08
 offices:
 - classification: capitol
   address: State Capitol Room 1529, P.O. Box 94604, Lincoln, NE 68509
@@ -35,3 +35,9 @@ sources:
 - url: https://nebraskalegislature.gov/senators/senator_list.php
   note: members list page
 - url: https://www.linkedin.com/in/fred-meyer-05733b48
+- url: https://nebraskalegislature.gov/FloorDocs/109/PDF/Journal/r1day1.pdf
+  note: 109th Legislature journal, day 1 (2025-01-08); Daniel D. McKeon seated for District 41, ending the first term
+- url: https://nebraskaexaminer.com/2026/01/14/former-state-sen-fred-meyer-appointed-to-replace-dan-mckeon-in-nebraska-legislature/
+  note: reappointed to District 41 on 2026-01-14 after McKeon resigned
+- url: https://nebraskapublicmedia.org/en/news/news-articles/pillen-appoints-a-familiar-face-as-senator-for-district-41-after-mckeons-resignation/
+  note: sworn in again 2026-01-14
