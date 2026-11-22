@@ -13,7 +13,7 @@ roles:
   type: legislature
   jurisdiction: ocd-jurisdiction/country:us/state:ne/government
   district: '23'
-  end_date: 2025-02-03
+  end_date: 2025-01-08
 offices: []
 links:
 - url: https://nebraskalegislature.gov/senators/landing-pages/index.php?District=23
@@ -35,3 +35,7 @@ sources:
 - url: https://nebraskalegislature.gov/senators/landing-pages/index.php?District=23
 - url: https://nebraskalegislature.gov/senators/senator_list.php
 - url: https://news.legislature.ne.gov/dist23
+- url: https://nebraskalegislature.gov/FloorDocs/108/PDF/Journal/s1day17.pdf
+  note: 108th Legislature journal, First Special Session day 17 (2024-08-20, sine die); still a member on the final roll call
+- url: https://nebraskalegislature.gov/FloorDocs/109/PDF/Journal/r1day1.pdf
+  note: 109th Legislature journal, day 1 (2025-01-08); Jared Storm seated for District 23, ending this term
