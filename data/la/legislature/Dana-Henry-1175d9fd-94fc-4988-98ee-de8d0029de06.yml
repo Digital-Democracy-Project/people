@@ -8,7 +8,7 @@ image: https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/Dana_Henry
 party:
 - name: Democratic
 roles:
-- start_date: 2026-03-23
+- start_date: 2026-03-24
   type: lower
   jurisdiction: ocd-jurisdiction/country:us/state:la/government
   district: '100'
@@ -31,3 +31,5 @@ sources:
 - url: https://en.wikipedia.org/wiki/Dana_Henry
 - url: https://house.louisiana.gov/H_Reps/members?ID=100
 - url: https://www.linkedin.com/in/danahenry1
+- url: https://house.louisiana.gov/H_Journals/H_Journals_All/2026_RSJournals/26RS%20-%20HJ%200324%208.PDF
+  note: House Journal, 2026 Regular Session, 8th day (2026-03-24); Dana Henry took the oath of office for District 100
