@@ -1,0 +1,18 @@
+id: ocd-person/c66274e8-e036-46cc-8335-d126e9df5eb4
+name: Kirk Larsen
+given_name: Kirk
+family_name: Larsen
+roles:
+- start_date: 2026-03-09
+  end_date: 2026-03-16
+  type: lower
+  jurisdiction: ocd-jurisdiction/country:us/state:id/government
+  district: 33B
+  end_reason: substitute for Rep. Marco Erickson (Idaho Code 67-412)
+other_names:
+- name: Erickson(Larsen)
+  start_date: 2026-03-09
+  end_date: 2026-03-16
+sources:
+- url: https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2026/journals/hfinal.pdf
+- url: https://legislature.idaho.gov/sessioninfo/2026/legislation/H0545/

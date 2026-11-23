@@ -1,0 +1,18 @@
+id: ocd-person/ba29fb63-be74-4bcd-908f-91353ca012c2
+name: Jeff Carlson
+given_name: Jeff
+family_name: Carlson
+roles:
+- start_date: 2026-02-11
+  end_date: 2026-02-13
+  type: lower
+  jurisdiction: ocd-jurisdiction/country:us/state:id/government
+  district: 19B
+  end_reason: substitute for Rep. Chris Mathias (Idaho Code 67-412)
+other_names:
+- name: Mathias(Carlson)
+  start_date: 2026-02-11
+  end_date: 2026-02-13
+sources:
+- url: https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2026/journals/hfinal.pdf
+- url: https://legislature.idaho.gov/sessioninfo/2026/legislation/H0520/

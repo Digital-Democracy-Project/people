@@ -1,0 +1,18 @@
+id: ocd-person/91577ce1-120c-4e20-91d8-12d8cc262ff0
+name: Lisa Cannon
+given_name: Lisa
+family_name: Cannon
+roles:
+- start_date: 2026-03-30
+  end_date: 2026-04-02
+  type: lower
+  jurisdiction: ocd-jurisdiction/country:us/state:id/government
+  district: 30A
+  end_reason: substitute for Rep. David Cannon (Idaho Code 67-412)
+other_names:
+- name: Cannon(Cannon)
+  start_date: 2026-03-30
+  end_date: 2026-04-02
+sources:
+- url: https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2026/journals/hfinal.pdf
+- url: https://legislature.idaho.gov/sessioninfo/2026/legislation/H0516/

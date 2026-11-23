@@ -1,0 +1,18 @@
+id: ocd-person/5106faf4-6d0e-4165-875e-9bf79bb6fbc3
+name: Randolph J. Hill
+given_name: Randolph
+family_name: Hill
+roles:
+- start_date: 2026-03-31
+  end_date: 2026-04-02
+  type: lower
+  jurisdiction: ocd-jurisdiction/country:us/state:id/government
+  district: 14A
+  end_reason: substitute for Rep. Ted Hill (Idaho Code 67-412)
+other_names:
+- name: Hill(Hill)
+  start_date: 2026-03-31
+  end_date: 2026-04-02
+sources:
+- url: https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2026/journals/hfinal.pdf
+- url: https://legislature.idaho.gov/sessioninfo/2026/legislation/H0516/

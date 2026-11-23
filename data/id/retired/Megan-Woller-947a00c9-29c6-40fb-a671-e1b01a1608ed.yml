@@ -9,10 +9,21 @@ roles:
   jurisdiction: ocd-jurisdiction/country:us/state:id/government
   district: '16'
   end_reason: acting senator, qualified substitute for Sen. Alison Rabe (Idaho Code 67-412)
+- start_date: 2026-03-02
+  end_date: 2026-03-04
+  type: lower
+  jurisdiction: ocd-jurisdiction/country:us/state:id/government
+  district: 16B
+  end_reason: substitute for Rep. Annie Henderson Haws (Idaho Code 67-412)
 other_names:
 - name: Woller(Rabe)
   start_date: 2026-03-13
   end_date: 2026-03-17
+- name: Haws(Woller)
+  start_date: 2026-03-02
+  end_date: 2026-03-04
 sources:
 - url: https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2026/journals/sfinal.pdf
 - url: https://legislature.idaho.gov/sessioninfo/2026/legislation/S1227/
+- url: https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2026/journals/hfinal.pdf
+- url: https://legislature.idaho.gov/sessioninfo/2026/legislation/H0658/
