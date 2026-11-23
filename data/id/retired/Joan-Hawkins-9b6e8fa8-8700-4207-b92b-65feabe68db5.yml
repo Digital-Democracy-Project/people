@@ -1,0 +1,14 @@
+id: ocd-person/9b6e8fa8-8700-4207-b92b-65feabe68db5
+name: Joan Hawkins
+given_name: Joan
+family_name: Hawkins
+roles:
+- start_date: 2026-02-17
+  end_date: 2026-02-19
+  type: upper
+  jurisdiction: ocd-jurisdiction/country:us/state:id/government
+  district: '27'
+  end_reason: acting senator, qualified substitute for Sen. Kelly Anthon (Idaho Code 67-412)
+sources:
+- url: https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2026/journals/sfinal.pdf
+- url: https://legislature.idaho.gov/sessioninfo/2026/legislation/S1242/

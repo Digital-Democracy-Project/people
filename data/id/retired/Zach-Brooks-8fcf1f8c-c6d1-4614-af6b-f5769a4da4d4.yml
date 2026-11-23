@@ -1,0 +1,14 @@
+id: ocd-person/8fcf1f8c-c6d1-4614-af6b-f5769a4da4d4
+name: Zach Brooks
+given_name: Zach
+family_name: Brooks
+roles:
+- start_date: 2026-02-17
+  end_date: 2026-02-18
+  type: upper
+  jurisdiction: ocd-jurisdiction/country:us/state:id/government
+  district: '23'
+  end_reason: acting senator, qualified substitute for Sen. Todd Lakey (Idaho Code 67-412)
+sources:
+- url: https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2026/journals/sfinal.pdf
+- url: https://legislature.idaho.gov/sessioninfo/2026/legislation/S1242/
