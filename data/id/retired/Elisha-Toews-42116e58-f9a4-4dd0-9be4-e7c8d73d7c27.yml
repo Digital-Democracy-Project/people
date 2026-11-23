@@ -1,0 +1,18 @@
+id: ocd-person/42116e58-f9a4-4dd0-9be4-e7c8d73d7c27
+name: Elisha Toews
+given_name: Elisha
+family_name: Toews
+roles:
+- start_date: 2026-02-03
+  end_date: 2026-02-05
+  type: upper
+  jurisdiction: ocd-jurisdiction/country:us/state:id/government
+  district: '4'
+  end_reason: acting senator, qualified substitute for Sen. Ben Toews (Idaho Code 67-412)
+other_names:
+- name: Toews(Toews)
+  start_date: 2026-02-03
+  end_date: 2026-02-05
+sources:
+- url: https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2026/journals/sfinal.pdf
+- url: https://legislature.idaho.gov/sessioninfo/2026/legislation/S1221/

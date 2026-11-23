@@ -1,0 +1,18 @@
+id: ocd-person/1672ff39-5743-4996-a726-dbcfc5efd95e
+name: Garrett Bjerke
+given_name: Garrett
+family_name: Bjerke
+roles:
+- start_date: 2026-02-12
+  end_date: 2026-02-16
+  type: upper
+  jurisdiction: ocd-jurisdiction/country:us/state:id/government
+  district: '20'
+  end_reason: acting senator, qualified substitute for Sen. Josh Keyser (Idaho Code 67-412)
+other_names:
+- name: Bjerke(Keyser)
+  start_date: 2026-02-12
+  end_date: 2026-02-16
+sources:
+- url: https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2026/journals/sfinal.pdf
+- url: https://legislature.idaho.gov/sessioninfo/2026/legislation/S1240/

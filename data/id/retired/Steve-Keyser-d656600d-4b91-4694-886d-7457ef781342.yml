@@ -1,0 +1,18 @@
+id: ocd-person/d656600d-4b91-4694-886d-7457ef781342
+name: Steve Keyser
+given_name: Steve
+family_name: Keyser
+roles:
+- start_date: 2026-03-05
+  end_date: 2026-03-07
+  type: upper
+  jurisdiction: ocd-jurisdiction/country:us/state:id/government
+  district: '15'
+  end_reason: acting senator, qualified substitute for Sen. Codi Galloway (Idaho Code 67-412)
+other_names:
+- name: Keyser(Galloway)
+  start_date: 2026-03-05
+  end_date: 2026-03-07
+sources:
+- url: https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2026/journals/sfinal.pdf
+- url: https://legislature.idaho.gov/sessioninfo/2026/legislation/S1285/
