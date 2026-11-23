@@ -9,6 +9,10 @@ roles:
   jurisdiction: ocd-jurisdiction/country:us/state:id/government
   district: '7'
   end_reason: acting senator, qualified substitute for Sen. Cindy Carlson (Idaho Code 67-412)
+other_names:
+- name: Rundhaug(Carlson)
+  start_date: 2026-03-09
+  end_date: 2026-03-12
 sources:
 - url: https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2026/journals/sfinal.pdf
 - url: https://legislature.idaho.gov/sessioninfo/2026/legislation/S1224/
