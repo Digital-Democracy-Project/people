@@ -1,0 +1,14 @@
+id: ocd-person/761aca2e-8982-44a6-bf6f-ceba6e679503
+name: Brian Merrell
+given_name: Brian
+family_name: Merrell
+roles:
+- start_date: 2026-02-19
+  end_date: 2026-02-19
+  type: upper
+  jurisdiction: ocd-jurisdiction/country:us/state:id/government
+  district: '23'
+  end_reason: acting senator, qualified substitute for Sen. Todd Lakey (Idaho Code 67-412)
+sources:
+- url: https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2026/journals/sfinal.pdf
+- url: https://legislature.idaho.gov/sessioninfo/2026/legislation/S1232/

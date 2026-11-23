@@ -7,10 +7,18 @@ roles:
 - end_date: '2027-12-31'
   type: mayor
   jurisdiction: ocd-jurisdiction/country:us/state:id/place:nampa/government
+- start_date: 2026-03-02
+  end_date: 2026-03-03
+  type: upper
+  jurisdiction: ocd-jurisdiction/country:us/state:id/government
+  district: '12'
+  end_reason: acting senator, qualified substitute for Sen. Ben Adams (Idaho Code 67-412)
 links:
 - url: https://www.cityofnampa.us/529/Office-of-the-Mayor
 sources:
 - url: https://www.cityofnampa.us/529/Office-of-the-Mayor
+- url: https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2026/journals/sfinal.pdf
+- url: https://legislature.idaho.gov/sessioninfo/2026/legislation/S1300/
 offices:
 - address: 411 3rd St. S.;Nampa, ID 83651
   voice: 208-468-5401
