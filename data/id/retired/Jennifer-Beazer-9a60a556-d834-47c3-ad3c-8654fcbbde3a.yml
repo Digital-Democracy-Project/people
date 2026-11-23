@@ -1,0 +1,18 @@
+id: ocd-person/9a60a556-d834-47c3-ad3c-8654fcbbde3a
+name: Jennifer Beazer
+given_name: Jennifer
+family_name: Beazer
+roles:
+- start_date: 2026-04-01
+  end_date: 2026-04-03
+  type: lower
+  jurisdiction: ocd-jurisdiction/country:us/state:id/government
+  district: 17B
+  end_reason: substitute for Rep. Megan Egbert (Idaho Code 67-412)
+other_names:
+- name: Egbert(Beazer)
+  start_date: 2026-04-01
+  end_date: 2026-04-03
+sources:
+- url: https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2026/journals/hfinal.pdf
+- url: https://legislature.idaho.gov/sessioninfo/2026/legislation/H0516/

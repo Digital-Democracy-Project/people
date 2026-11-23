@@ -1,0 +1,18 @@
+id: ocd-person/be810d9e-6a56-44e8-acf6-8487c8b3801f
+name: William Athay
+given_name: William
+family_name: Athay
+roles:
+- start_date: 2026-03-04
+  end_date: 2026-03-06
+  type: lower
+  jurisdiction: ocd-jurisdiction/country:us/state:id/government
+  district: 32A
+  end_reason: substitute for Rep. Stephanie Mickelsen (Idaho Code 67-412)
+other_names:
+- name: Mickelsen(Athay)
+  start_date: 2026-03-04
+  end_date: 2026-03-06
+sources:
+- url: https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2026/journals/hfinal.pdf
+- url: https://legislature.idaho.gov/sessioninfo/2026/legislation/H0507/

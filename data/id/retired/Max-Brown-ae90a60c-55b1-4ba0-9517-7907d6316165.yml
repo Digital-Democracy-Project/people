@@ -1,0 +1,27 @@
+id: ocd-person/ae90a60c-55b1-4ba0-9517-7907d6316165
+name: Max Brown
+given_name: Max
+family_name: Brown
+roles:
+- start_date: 2026-03-02
+  end_date: 2026-03-04
+  type: lower
+  jurisdiction: ocd-jurisdiction/country:us/state:id/government
+  district: 14A
+  end_reason: substitute for Rep. Ted Hill (Idaho Code 67-412)
+- start_date: 2026-03-27
+  end_date: 2026-03-30
+  type: lower
+  jurisdiction: ocd-jurisdiction/country:us/state:id/government
+  district: 14A
+  end_reason: substitute for Rep. Ted Hill (Idaho Code 67-412)
+other_names:
+- name: Hill(Brown)
+  start_date: 2026-03-02
+  end_date: 2026-03-04
+- name: Hill(Brown)
+  start_date: 2026-03-27
+  end_date: 2026-03-30
+sources:
+- url: https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2026/journals/hfinal.pdf
+- url: https://legislature.idaho.gov/sessioninfo/2026/legislation/H0658/

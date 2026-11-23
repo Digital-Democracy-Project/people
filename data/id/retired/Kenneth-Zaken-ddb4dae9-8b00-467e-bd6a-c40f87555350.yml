@@ -1,0 +1,18 @@
+id: ocd-person/ddb4dae9-8b00-467e-bd6a-c40f87555350
+name: Kenneth Zaken
+given_name: Kenneth
+family_name: Zaken
+roles:
+- start_date: 2026-02-17
+  end_date: 2026-02-19
+  type: lower
+  jurisdiction: ocd-jurisdiction/country:us/state:id/government
+  district: 3B
+  end_reason: substitute for Rep. Jordan Redman (Idaho Code 67-412)
+other_names:
+- name: Redman(Zaken)
+  start_date: 2026-02-17
+  end_date: 2026-02-19
+sources:
+- url: https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2026/journals/hfinal.pdf
+- url: https://legislature.idaho.gov/sessioninfo/2026/legislation/H0498/

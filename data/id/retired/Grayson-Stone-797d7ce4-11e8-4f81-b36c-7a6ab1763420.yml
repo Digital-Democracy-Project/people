@@ -1,0 +1,27 @@
+id: ocd-person/797d7ce4-11e8-4f81-b36c-7a6ab1763420
+name: Grayson Stone
+given_name: Grayson
+family_name: Stone
+roles:
+- start_date: 2026-01-26
+  end_date: 2026-01-26
+  type: lower
+  jurisdiction: ocd-jurisdiction/country:us/state:id/government
+  district: 25A
+  end_reason: substitute for Rep. Don Hall (Idaho Code 67-412)
+- start_date: 2026-02-02
+  end_date: 2026-04-02
+  type: lower
+  jurisdiction: ocd-jurisdiction/country:us/state:id/government
+  district: 25A
+  end_reason: substitute for Rep. Don Hall (Idaho Code 67-412)
+other_names:
+- name: Hall(Stone)
+  start_date: 2026-01-26
+  end_date: 2026-01-26
+- name: Hall(Stone)
+  start_date: 2026-02-02
+  end_date: 2026-04-02
+sources:
+- url: https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2026/journals/hfinal.pdf
+- url: https://legislature.idaho.gov/sessioninfo/2026/legislation/H0491/

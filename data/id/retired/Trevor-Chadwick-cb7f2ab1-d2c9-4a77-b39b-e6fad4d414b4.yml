@@ -1,0 +1,18 @@
+id: ocd-person/cb7f2ab1-d2c9-4a77-b39b-e6fad4d414b4
+name: Trevor Chadwick
+given_name: Trevor
+family_name: Chadwick
+roles:
+- start_date: 2026-03-16
+  end_date: 2026-03-18
+  type: lower
+  jurisdiction: ocd-jurisdiction/country:us/state:id/government
+  district: 10B
+  end_reason: substitute for Rep. Bruce Skaug (Idaho Code 67-412)
+other_names:
+- name: Skaug(Chadwick)
+  start_date: 2026-03-16
+  end_date: 2026-03-18
+sources:
+- url: https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2026/journals/hfinal.pdf
+- url: https://legislature.idaho.gov/sessioninfo/2026/legislation/H0508/
