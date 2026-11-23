@@ -1,0 +1,18 @@
+id: ocd-person/aebe9f76-e133-44a5-b76e-6ae5d4cbcd4a
+name: Lesli Bjerke
+given_name: Lesli
+family_name: Bjerke
+roles:
+- start_date: 2026-03-02
+  end_date: 2026-04-02
+  type: upper
+  jurisdiction: ocd-jurisdiction/country:us/state:id/government
+  district: '5'
+  end_reason: acting senator, qualified substitute for Sen. Carl Bjerke (Idaho Code 67-412)
+other_names:
+- name: Bjerke(Bjerke)
+  start_date: 2026-03-02
+  end_date: 2026-04-02
+sources:
+- url: https://legislature.idaho.gov/wp-content/uploads/sessioninfo/2026/journals/sfinal.pdf
+- url: https://legislature.idaho.gov/sessioninfo/2026/legislation/S1300/
