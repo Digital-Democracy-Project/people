@@ -23,6 +23,10 @@ other_names:
 - name: A. Harlan
 - name: A.M. Harlan
 - name: Harlan, A.
+- name: Alexander Harlan
+other_identifiers:
+- scheme: openstates
+  identifier: ocd-person/d30780ed-e435-48cd-bfa9-8e197d3ebe81
 sources:
 - url: https://ballotpedia.org/Alexander_Harlan
 - url: https://en.wikipedia.org/wiki/Alex_Harlan
