@@ -149,8 +149,9 @@ jobs:
       run: |
         # OPEN-854: Maine roll calls print only "SURNAME of Town" (House) or
         # "SURNAME of County" (Senate), so a current member without such a
-        # name in their file gets none of their votes. Runs on every change
-        # (it reads only data/me, ~1s): a new member arrives in any sync. No
+        # name in their file gets none of their votes. Runs whenever this
+        # workflow does (it reads only data/me, ~1s), whatever state changed:
+        # a member seated today fails the next data change. No
         # saved roll call, so nothing goes stale; a wrong town is the after-
         # import alert's job (OPEN-855) and the by-hand default mode's.
         uv run python .github/scripts/check_me_rollcall_names.py --current

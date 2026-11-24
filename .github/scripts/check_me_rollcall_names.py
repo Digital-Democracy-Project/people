@@ -25,9 +25,10 @@ this again.
 With --current (OPEN-854; what CI runs on every change) no saved roll call is read, so
 nothing goes stale: every member seated today (a voting House or Senate seat with no end
 date, or one ending today or later) must hold at least one name "SURNAME of <anything>"
-built from their own family_name, and no such name may be on two current members of the
-same chamber. That catches a missing printed name but not a wrong town or county; the
-default mode (above) and the after-import unmatched-voter alert (OPEN-855) catch those.
+built from their own family_name, and no printed-style name ("SURNAME of ...") may be on
+two current members of the same chamber. That catches a missing printed name but not a
+wrong town or county; the default mode (above) and the after-import unmatched-voter
+alert (OPEN-855) catch those.
 
 Usage:
     python .github/scripts/check_me_rollcall_names.py            # saved roll calls
@@ -154,19 +155,16 @@ def find_current_missing(today: str) -> list[str]:
                 for start, end in voting_roles(person, chamber)
             ):
                 continue
+            # Every printed-style name counts towards a collision, whoever's surname
+            # it carries: core would match it to each holder.
+            for name in all_names(person):
+                if re.fullmatch(r"[^a-z]+ of \S.*", name):
+                    held.setdefault((chamber, name), []).append(person["name"])
             family = (person.get("family_name") or "").upper()
-            printed = (
-                {
-                    n
-                    for n in all_names(person)
-                    if re.fullmatch(rf"{re.escape(family)} of \S.*", n)
-                }
-                if family
-                else set()
-            )
-            for name in printed:
-                held.setdefault((chamber, name), []).append(person["name"])
-            if not printed:
+            if not family or not any(
+                re.fullmatch(rf"{re.escape(family)} of \S.*", n)
+                for n in all_names(person)
+            ):
                 house = "House" if chamber == "lower" else "Senate"
                 where = "<town>" if chamber == "lower" else "<county>"
                 missing.append(
@@ -192,7 +190,7 @@ def main() -> int:
         missing = find_current_missing(datetime.date.today().isoformat())
         for line in missing:
             print(line)
-        print(f"{len(missing)} current Maine member(s) without a roll-call name")
+        print(f"{len(missing)} current Maine roll-call name problem(s)")
         return 1 if missing else 0
 
     missing, seated_later = find_missing()
