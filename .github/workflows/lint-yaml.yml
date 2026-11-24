@@ -14,6 +14,7 @@ on:
       - ".github/scripts/check_duplicate_people.py"
       - ".github/scripts/check_role_dates.py"
       - ".github/scripts/check_me_rollcall_names.py"
+      - ".github/scripts/check_field_lengths.py"
       # - ".github/scripts/check_links.py"
   pull_request:
     branches:
@@ -28,6 +29,7 @@ on:
       - ".github/scripts/check_duplicate_people.py"
       - ".github/scripts/check_role_dates.py"
       - ".github/scripts/check_me_rollcall_names.py"
+      - ".github/scripts/check_field_lengths.py"
       # - ".github/scripts/check_links.py"
 
 # A new push to a PR cancels that PR's still-running check; pushes to main
@@ -155,6 +157,22 @@ jobs:
         # saved roll call, so nothing goes stale; a wrong town is the after-
         # import alert's job (OPEN-855) and the by-hand default mode's.
         uv run python .github/scripts/check_me_rollcall_names.py --current
+    - name: check text fields fit their database columns
+      run: |
+        # OPEN-877: a note over varchar(300) cancels a whole state's people
+        # load in production. Reads only the data files this change touched.
+        uv run python .github/scripts/check_field_lengths.py \
+          --changed-files $(cat .github/outputs/all_changed_files.txt)
+    - name: check the field-length check still fails an over-limit value
+      run: |
+        # A 300-character note must pass and a 301-character one must fail,
+        # so the check above cannot quietly become a no-op.
+        out=$(uv run python .github/scripts/check_field_lengths.py \
+          --data-dir .github/scripts/fixtures/field_lengths/data 2>&1) && {
+          echo "expected a failure on over-limit.yml"; exit 1; }
+        echo "${out}" | grep -q 'over-limit.yml: sources\[0\]/note is 301' || {
+          echo "${out}"; exit 1; }
+        ! echo "${out}" | grep -q 'at-limit.yml'
     # - name: check new URLs are live
       # env:
       #   BASE_ARGS: ${{ steps.base.outputs.base-args }}
