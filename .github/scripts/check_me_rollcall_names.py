@@ -22,14 +22,24 @@ when one takes a seat, refresh the saved roll calls from a recent vote (the sour
 each fixture's file name: LawMakerWeb/rollcall.asp?ID=<id>&serialnumber=<n>) and run
 this again.
 
+With --current (OPEN-854; what CI runs on every change) no saved roll call is read, so
+nothing goes stale: every member seated today (a voting House or Senate seat with no end
+date, or one ending today or later) must hold at least one name "SURNAME of <anything>"
+built from their own family_name, and no printed-style name ("SURNAME of ...") may be on
+two current members of the same chamber. That catches a missing printed name but not a
+wrong town or county; the default mode (above) and the after-import unmatched-voter
+alert (OPEN-855) catch those.
+
 Usage:
-    python .github/scripts/check_me_rollcall_names.py
+    python .github/scripts/check_me_rollcall_names.py            # saved roll calls
+    python .github/scripts/check_me_rollcall_names.py --current  # current members
 """
 
 from __future__ import annotations
 
 import argparse
 import datetime
+import re
 import sys
 from pathlib import Path
 
@@ -132,8 +142,56 @@ def find_missing() -> tuple[list[str], int]:
     return missing, seated_later
 
 
+def find_current_missing(today: str) -> list[str]:
+    """Current members (seated on `today`) without a "SURNAME of ..." name of their own
+    surname, and any such name held by two current members of one chamber."""
+    held: dict[tuple[str, str], list[str]] = {}
+    missing: list[str] = []
+    for path in sorted(p for d in PERSON_DIRS for p in d.glob("*.yml")):
+        person = yaml.safe_load(path.read_text())
+        for chamber in ("lower", "upper"):
+            if not any(
+                start <= today and (not end or end >= today)
+                for start, end in voting_roles(person, chamber)
+            ):
+                continue
+            # Every printed-style name counts towards a collision, whoever's surname
+            # it carries: core would match it to each holder.
+            for name in all_names(person):
+                if re.fullmatch(r"[^a-z]+ of \S.*", name):
+                    held.setdefault((chamber, name), []).append(person["name"])
+            family = (person.get("family_name") or "").upper()
+            if not family or not any(
+                re.fullmatch(rf"{re.escape(family)} of \S.*", n)
+                for n in all_names(person)
+            ):
+                house = "House" if chamber == "lower" else "Senate"
+                where = "<town>" if chamber == "lower" else "<county>"
+                missing.append(
+                    f"{house}: {person['name']} ({path.name}) has no name "
+                    f'"{family or "<no family_name>"} of {where}"'
+                )
+    for (_chamber, name), holders in sorted(held.items()):
+        if len(holders) > 1:
+            missing.append(f'"{name}" is on {len(holders)} current members: {holders}')
+    return missing
+
+
 def main() -> int:
-    argparse.ArgumentParser(description=__doc__.splitlines()[0]).parse_args()
+    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    parser.add_argument(
+        "--current",
+        action="store_true",
+        help="check today's members for a printed-style name; no saved roll call",
+    )
+    args = parser.parse_args()
+
+    if args.current:
+        missing = find_current_missing(datetime.date.today().isoformat())
+        for line in missing:
+            print(line)
+        print(f"{len(missing)} current Maine roll-call name problem(s)")
+        return 1 if missing else 0
 
     missing, seated_later = find_missing()
     for line in missing:
