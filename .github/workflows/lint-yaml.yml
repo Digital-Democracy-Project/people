@@ -188,10 +188,11 @@ jobs:
           --changed-files $(cat .github/outputs/all_changed_files.txt) ${BASE_ARGS}
     - name: check the person-name check still fails a note and a copy
       run: |
-        # The fixtures hold a note-like name and a longer-name copy (both must
-        # fail), a real record, a nickname name and a longer name in another
-        # seat (all must pass), so the check above cannot quietly become a
-        # no-op or start failing nicknames or namesakes.
+        # The fixtures hold names that must fail (a note, a colon, a status
+        # word, an over-long name, a longer-name copy) and records that must
+        # pass (a real record, a nickname, a longer name in another seat, and
+        # a suffix that shares only a seat page three people use), so the
+        # check above cannot quietly become a no-op or start failing them.
         out=$(uv run python .github/scripts/check_person_names.py \
           --data-dir .github/scripts/fixtures/person_names/data 2>&1) && {
           echo "expected a failure on note-copy.yml"; exit 1; }
@@ -201,7 +202,18 @@ jobs:
           echo "${out}"; exit 1; }
         echo "${out}" | grep -q 'long-name.yml: name .* is short-name.yml' || {
           echo "${out}"; exit 1; }
-        ! echo "${out}" | grep -q 'nickname.yml\|real-record.yml: \|short-name.yml: \|other-seat.yml: '
+        for f in colon-name status-word long-name-limit; do
+          echo "${out}" | grep -q "${f}.yml: name" || {
+            echo "${out}"; echo "expected a failure on ${f}.yml"; exit 1; }
+        done
+        if echo "${out}" | grep -q 'nickname.yml\|real-record.yml: \|short-name.yml: \|other-seat\|suffix'; then
+          echo "${out}"; echo "a legitimate record was flagged"; exit 1
+        fi
+        # a change that touches only the shorter record still reports the copy
+        out=$(cd .github/scripts/fixtures/person_names && uv run python ../../check_person_names.py \
+          --data-dir data --changed-files data/xx/retired/short-name.yml 2>&1) || true
+        echo "${out}" | grep -q 'long-name.yml: name' || {
+          echo "${out}"; echo "expected the copy to be reported"; exit 1; }
     # - name: check new URLs are live
       # env:
       #   BASE_ARGS: ${{ steps.base.outputs.base-args }}

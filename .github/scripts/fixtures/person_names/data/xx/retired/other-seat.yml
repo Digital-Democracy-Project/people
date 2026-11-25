@@ -1,6 +1,6 @@
-id: ocd-person/00000000-0000-4000-8000-000000000004
-name: Pat Example Senior
-email: pat.example@example.com
+id: ocd-person/00000000-0000-4000-8000-000000000017
+name: Kim Example Senior
+email: kim.example@example.com
 roles:
 - end_date: '2023-01-23'
   type: upper

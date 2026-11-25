@@ -44,6 +44,7 @@ NOTE_WORD = re.compile(
     r"\b(resign(?:ed|s|ation)|replaced|vacated|vacancy|deceased|died)\b", re.I
 )
 MAX_NAME = 60
+PAIR = 2
 
 Person = tuple[Path, dict[str, Any]]
 
@@ -133,7 +134,10 @@ def copy_findings(people: list[Person], touched: set[Path] | None) -> list[str]:
     for index, (_, data) in enumerate(people):
         for key in link_keys(data):
             by_key[key].append(index)
-    pairs = {(i, j) for idx in by_key.values() for i in idx for j in idx if i < j}
+    # a key held by three or more files is a landing page (a seat's page that
+    # successive holders share), not evidence of one person
+    shared = [idx for idx in by_key.values() if len(idx) == PAIR]
+    pairs = {(idx[0], idx[1]) for idx in shared}
     out = []
     for i, j in sorted(pairs):
         (pa, da), (pb, db) = people[i], people[j]

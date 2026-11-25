@@ -1,0 +1,7 @@
+id: ocd-person/00000000-0000-4000-8000-000000000012
+name: Sam Sample (Deceased)
+roles:
+- end_date: '2023-01-23'
+  type: lower
+  jurisdiction: ocd-jurisdiction/country:us/state:xx/government
+  district: '12'
