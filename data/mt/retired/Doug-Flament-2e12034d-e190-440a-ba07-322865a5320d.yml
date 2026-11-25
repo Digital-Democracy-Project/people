@@ -12,5 +12,8 @@ roles:
   district: '29'
 links:
 - url: https://leg.mt.gov/legislator-information/roster/individual/7507
+other_identifiers:
+- scheme: openstates
+  identifier: ocd-person/2c6a890f-c0f4-45e7-aba5-d516f55173f8
 sources:
 - url: https://leg.mt.gov/legislator-information/roster/individual/7507

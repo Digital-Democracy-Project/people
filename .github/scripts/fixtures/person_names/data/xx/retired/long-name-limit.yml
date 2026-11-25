@@ -1,0 +1,8 @@
+id: ocd-person/00000000-0000-4000-8000-000000000013
+name: Sam Sample Alexander Bartholomew Christopher Davenport Ellsworth Fitzgerald
+roles:
+- start_date: '2019-01-01'
+  end_date: '2023-01-23'
+  type: lower
+  jurisdiction: ocd-jurisdiction/country:us/state:xx/government
+  district: '13'

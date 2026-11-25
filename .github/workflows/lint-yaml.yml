@@ -15,6 +15,7 @@ on:
       - ".github/scripts/check_role_dates.py"
       - ".github/scripts/check_me_rollcall_names.py"
       - ".github/scripts/check_field_lengths.py"
+      - ".github/scripts/check_person_names.py"
       # - ".github/scripts/check_links.py"
   pull_request:
     branches:
@@ -30,6 +31,7 @@ on:
       - ".github/scripts/check_role_dates.py"
       - ".github/scripts/check_me_rollcall_names.py"
       - ".github/scripts/check_field_lengths.py"
+      - ".github/scripts/check_person_names.py"
       # - ".github/scripts/check_links.py"
 
 # A new push to a PR cancels that PR's still-running check; pushes to main
@@ -173,6 +175,45 @@ jobs:
         echo "${out}" | grep -q 'over-limit.yml: sources\[0\]/note is 301' || {
           echo "${out}"; exit 1; }
         ! echo "${out}" | grep -q 'at-limit.yml'
+    - name: check person names are names, not notes or copies
+      env:
+        BASE_ARGS: ${{ steps.base.outputs.base-args }}
+      run: |
+        # OPEN-891: a roster note scraped in as a name ("<Name> Resigned From
+        # Hd29 ... And Replaced By ...") left a junk second copy of a real
+        # member. Reports only names this change gave a file (see the
+        # script's docstring); long-standing ones elsewhere are not this
+        # change's to fix.
+        uv run python .github/scripts/check_person_names.py \
+          --changed-files $(cat .github/outputs/all_changed_files.txt) ${BASE_ARGS}
+    - name: check the person-name check still fails a note and a copy
+      run: |
+        # The fixtures hold names that must fail (a note, a colon, a status
+        # word, an over-long name, a longer-name copy) and records that must
+        # pass (a real record, a nickname, a longer name in another seat, and
+        # a suffix that shares only a seat page three people use), so the
+        # check above cannot quietly become a no-op or start failing them.
+        out=$(uv run python .github/scripts/check_person_names.py \
+          --data-dir .github/scripts/fixtures/person_names/data 2>&1) && {
+          echo "expected a failure on note-copy.yml"; exit 1; }
+        echo "${out}" | grep -q 'note-copy.yml: name .* has a digit' || {
+          echo "${out}"; exit 1; }
+        echo "${out}" | grep -q 'note-copy.yml: name .* is real-record.yml' || {
+          echo "${out}"; exit 1; }
+        echo "${out}" | grep -q 'long-name.yml: name .* is short-name.yml' || {
+          echo "${out}"; exit 1; }
+        for f in colon-name status-word long-name-limit; do
+          echo "${out}" | grep -q "${f}.yml: name" || {
+            echo "${out}"; echo "expected a failure on ${f}.yml"; exit 1; }
+        done
+        if echo "${out}" | grep -q 'nickname.yml\|real-record.yml: \|short-name.yml: \|other-seat\|suffix'; then
+          echo "${out}"; echo "a legitimate record was flagged"; exit 1
+        fi
+        # a change that touches only the shorter record still reports the copy
+        out=$(cd .github/scripts/fixtures/person_names && uv run python ../../check_person_names.py \
+          --data-dir data --changed-files data/xx/retired/short-name.yml 2>&1) || true
+        echo "${out}" | grep -q 'long-name.yml: name' || {
+          echo "${out}"; echo "expected the copy to be reported"; exit 1; }
     # - name: check new URLs are live
       # env:
       #   BASE_ARGS: ${{ steps.base.outputs.base-args }}

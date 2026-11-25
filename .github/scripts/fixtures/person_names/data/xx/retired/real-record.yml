@@ -1,10 +1,13 @@
-id: ocd-person/2c6a890f-c0f4-45e7-aba5-d516f55173f8
-name: Doug Flament Resigned From Hd29 On 2023-01-10 And Replaced By Ed Butcher
+id: ocd-person/2e12034d-e190-440a-ba07-322865a5320d
+name: Doug Flament
+given_name: Doug
+family_name: Flament
 email: Doug.Flament@legmt.gov
 party:
 - name: Republican
 roles:
-- end_date: '2023-01-10'
+- start_date: '2019-01-01'
+  end_date: 2023-01-23
   type: lower
   jurisdiction: ocd-jurisdiction/country:us/state:mt/government
   district: '29'
