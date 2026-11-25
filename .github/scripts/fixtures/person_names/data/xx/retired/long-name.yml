@@ -2,7 +2,8 @@ id: ocd-person/00000000-0000-4000-8000-000000000003
 name: Pat Example, FNP
 email: pat.example@example.com
 roles:
-- end_date: '2023-01-23'
+- start_date: '2019-01-01'
+  end_date: '2023-01-23'
   type: upper
   jurisdiction: ocd-jurisdiction/country:us/state:xx/government
   district: '4'

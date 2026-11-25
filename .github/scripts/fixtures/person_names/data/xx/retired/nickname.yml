@@ -1,7 +1,8 @@
 id: ocd-person/00000000-0000-4000-8000-000000000001
 name: Fred (Coach) Plump
 roles:
-- end_date: '2023-01-10'
+- start_date: '2019-01-01'
+  end_date: '2023-01-10'
   type: lower
   jurisdiction: ocd-jurisdiction/country:us/state:xx/government
   district: '9'
